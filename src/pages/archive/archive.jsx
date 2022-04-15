@@ -7,17 +7,17 @@ import { useParams } from "react-router-dom"
 const Archive = (props) => {
     
     // const { id } = props.match.params
-    const { id } = useParams()
+    // const { id } = useParams()
 
-    const render = () => {
-        return id ? `ID есть, вот он - ${id}` : 'Нет ID никакого'
-    }
+    // const render = () => {
+    //     return id ? `ID есть, вот он - ${id}` : 'Нет ID никакого'
+    // }
 
     return (
         <>
             <Header mode={AppRoute.ARCHIVE}/>
             <section className="main__wrapper">
-                <div>{render()}</div>
+                {/* <div>{render()}</div> */}
                 <Board />
             </section>
         </>

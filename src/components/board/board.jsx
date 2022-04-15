@@ -1,14 +1,16 @@
 import React from "react";
 import Card from "../card/card";
+import Sorting from "../../components/sorting/sorting"
+import LoadMore from "../../components/load-more/load-more"
 
 const Board = () => {
     return (
         <section className="board">
-            {/* Тут будет сортировка */}
+            <Sorting />
             <div className="board__events">
                 <Card />
             </div>
-            <button className="load-more" type="button">Загрузить еще</button>
+            <LoadMore />
         </section>
     )
 }
