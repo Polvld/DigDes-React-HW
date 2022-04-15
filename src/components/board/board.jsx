@@ -18,7 +18,7 @@ const Board = ({ mode }) => {
     )
     }
     return (
-        <section className="board"></section>
+        <section className="board">
             <div className="board__events">
                 <Card />
             </div>
