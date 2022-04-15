@@ -18,7 +18,7 @@ const Archive = (props) => {
             <Header mode={AppRoute.ARCHIVE}/>
             <section className="main__wrapper">
                 {/* <div>{render()}</div> */}
-                <Board />
+                <Board mode={AppRoute.ARCHIVE}/>
             </section>
         </>
     )

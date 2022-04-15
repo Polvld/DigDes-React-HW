@@ -1,6 +1,7 @@
 import React from "react"
+import { AppRoute } from "../../const"
 
-const Sorting = () => {
+const Sorting = ({ mode }) => {
     return (
         <div class="board__filter-list">
             <span class="board__filter--title">Сортировка:</span>
