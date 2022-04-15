@@ -1,5 +1,6 @@
 export const AppRoute = {
     MAIN: 'main',
-    ARCHIVE: 'archive',
-    EVENT: 'event'
+    ARCHIVE: '/archive/:id?',
+    ADD: '/event',
+    EVENT: '/event/:id?'
 }
