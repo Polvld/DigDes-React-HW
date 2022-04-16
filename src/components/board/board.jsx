@@ -4,21 +4,16 @@ import Sorting from "../../components/sorting/sorting"
 import LoadMore from "../../components/load-more/load-more"
 import { AppRoute } from "../../const";
 
-const Board = ({ mode }) => {
-    const BoardType = mode
-    if (BoardType === AppRoute.MAIN) {
-    return (
-        <section className="board">
-            <Sorting />
-            <div className="board__events">
-                <Card />
-            </div>
-            <LoadMore />
-        </section>
-    )
+function BoardType (type) {
+    if (type === AppRoute.MAIN) {
+        return <Sorting />
     }
+    return
+}
+const Board = ({ mode }) => {
     return (
         <section className="board">
+        {BoardType(mode)}
             <div className="board__events">
                 <Card />
             </div>
@@ -26,4 +21,5 @@ const Board = ({ mode }) => {
         </section>
     )
 }
+
 export default Board
