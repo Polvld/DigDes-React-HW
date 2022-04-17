@@ -3,10 +3,10 @@ import Event from "../../components/event/event"
 import Filter from "../../components/filter/filter"
 import Header from "../../components/header/header"
 
-const Form = (props) => {
+const Form = () => {
     return (
         <>
-            <Header mode={AppRoute.MAIN}/>
+            <Header />
             <section className="main__wrapper">
                 <Filter />
                 <Event />

@@ -1,24 +1,21 @@
 import React from "react";
-import Header from "../../components/header/header";
-import Board from "../../components/board/board";
-import { AppRoute } from "../../const"
-import { useParams } from "react-router-dom"
+import Header from "../../components/header/header"
+import Board from "../../components/board/board"
 
-const Archive = (props) => {
+const Archive = () => {
     
     // const { id } = props.match.params
     // const { id } = useParams()
-
+    // console.log(AppRoute.ARCHIVE)
     // const render = () => {
     //     return id ? `ID есть, вот он - ${id}` : 'Нет ID никакого'
     // }
 
     return (
         <>
-            <Header mode={AppRoute.ARCHIVE}/>
+            <Header />
             <section className="main__wrapper">
-                {/* <div>{render()}</div> */}
-                <Board mode={AppRoute.ARCHIVE}/>
+                <Board />
             </section>
         </>
     )
