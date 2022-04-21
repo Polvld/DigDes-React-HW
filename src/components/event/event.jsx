@@ -1,6 +1,9 @@
 import React from "react"
+import { useParams } from "react-router-dom"
 
-const AddEvent = (props) => {
+
+const Event = () => {
+  const AddEvent = () => {
     return (
       <section class="board">
         <form className="board__form">
@@ -38,8 +41,8 @@ const AddEvent = (props) => {
           </form>
       </section>
     )
-}
-const EditEvent = (props) => {
+  }
+  const EditEvent = () => {
     return (
       <section class="board">
         <form class="board__form">
@@ -77,13 +80,9 @@ const EditEvent = (props) => {
         </form>
       </section>
     )
-}
-const Event = (props) => {
-        const EventType = props
-        if (EventType) {
-            return <AddEvent />
-        }
-        return <EditEvent />
+  }
+  const {id} = useParams()
+  return id ? <EditEvent /> : <AddEvent />
 }
 
 export default Event

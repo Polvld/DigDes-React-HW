@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+import { Link } from "react-router-dom"
 
 const Filter = () => {
     return (
@@ -51,10 +52,13 @@ const Filter = () => {
           <label htmlFor="filter__favorite" className="filter__label"
             >Избранное <span className="filter__favorite-count count">1</span></label
           >
-          <button
+          <Link to="/event">
+          <button 
             name="control"
             className="btn-add"
-          >Создать</button>
+          >
+          Создать</button>
+          </Link>
         </section>
     )
 }
