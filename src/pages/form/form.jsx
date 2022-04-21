@@ -3,13 +3,13 @@ import Event from "../../components/event/event"
 import Filter from "../../components/filter/filter"
 import Header from "../../components/header/header"
 
-const Form = () => {
+const Form = ({events}) => {
     return (
         <>
             <Header />
             <section className="main__wrapper">
                 <Filter />
-                <Event />
+                <Event events={events} />
             </section>
         </>
     )

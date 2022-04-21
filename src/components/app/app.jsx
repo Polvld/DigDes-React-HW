@@ -17,7 +17,9 @@ const App = ({events}) => {
             <Route path={AppRoute.ARCHIVE} exact>
                 <Archive events={events} />
             </Route>
-            <Route path={AppRoute.EVENT} exact component={Form} />
+            <Route path={AppRoute.EVENT} exact >
+                <Form events={events}/>
+            </Route>
             <Route path={AppRoute.ADD} exact component={Form} />
             <Route path='*' exact component={NotFound} />
         </Switch>
