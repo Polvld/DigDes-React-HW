@@ -5,13 +5,14 @@ import LoadMore from "../../components/load-more/load-more"
 import { AppRoute } from "../../const"
 import { useLocation } from "react-router-dom"
 
-const Board = () => {
+
+const Board = ({events}) => {
     const {pathname} = useLocation()
     return (
         <section className="board">
             {pathname === AppRoute.MAIN && <Sorting />}
                 <div className="board__events">
-                    <Card />
+                    {events.map(event => <Card {...event} key={event._id} />)}
                 </div>
             {/* считаю что проверка излишняя, но вдруг условия изменятся */}
             {pathname === AppRoute.MAIN && <LoadMore />} 
