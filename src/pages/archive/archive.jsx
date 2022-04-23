@@ -1,16 +1,10 @@
 import React from "react";
 import Header from "../../components/header/header"
 import Board from "../../components/board/board"
-import { events } from "../../store"
+import { events } from "../../store/index"
+import { observer } from "mobx-react-lite"
 
-const Archive = () => {
-    
-    // const { id } = props.match.params
-    // const { id } = useParams()
-    // console.log(AppRoute.ARCHIVE)
-    // const render = () => {
-    //     return id ? `ID есть, вот он - ${id}` : 'Нет ID никакого'
-    // }
+const Archive = observer(() => {
     const {archiveData} = events
     return (
         <>
@@ -20,6 +14,6 @@ const Archive = () => {
             </section>
         </>
     )
-}
+})
 
 export default Archive
