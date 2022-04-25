@@ -5,9 +5,10 @@ import { observer } from "mobx-react-lite"
 
 
 const Event = observer(({data}) => {
-  const {id} = useParams()
+  // const {id} = useParams()
+  const {id} = data
   const evts = data.filter(evt => id === evt._id)[0]
-  console.log(evts)
+  console.log('data.id', data.id)
   const dateType = () => {
     if (id) { 
     return (<input
