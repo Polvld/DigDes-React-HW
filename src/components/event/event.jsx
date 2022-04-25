@@ -1,9 +1,10 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 import { useState } from "react"
+import { observer } from "mobx-react-lite"
 
 
-const Event = ({data}) => {
+const Event = observer(({data}) => {
   const {id} = useParams()
   const evts = data.filter(evt => id === evt._id)[0]
   console.log(evts)
@@ -89,6 +90,6 @@ const Event = ({data}) => {
       </form>
     </section>
     )
-}
+})
 
 export default Event

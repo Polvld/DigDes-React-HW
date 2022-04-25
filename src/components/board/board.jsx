@@ -12,7 +12,7 @@ const Board = ({events}) => {
         <section className="board">
             {pathname === AppRoute.MAIN && <Sorting />}
                 <div className="board__events">
-                    {events.map(event => <Card {...event} key={event._id} />)}
+                    {events.map(event => <Card event={event} key={event._id} />)}
                 </div>
             {/* считаю что проверка излишняя, но вдруг условия изменятся */}
             {pathname === AppRoute.MAIN && <LoadMore />} 

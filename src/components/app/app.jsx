@@ -21,7 +21,9 @@ const App = () => {
             <Route path={AppRoute.EVENT} exact >
                 <Form />
             </Route>
-            <Route path={AppRoute.ADD} exact component={Form} />
+            <Route path={AppRoute.ADD} exact>
+                <Form />
+            </Route>
             <Route path='*' exact component={NotFound} />
         </Switch>
         </BrowserRouter>
