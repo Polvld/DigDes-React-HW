@@ -8,6 +8,7 @@ const request = async (url, method = 'GET', body) => {
       'Content-type': 'application/json'
     })
   });
+  // console.log('Запрос ушел', response)
 
   return await response.json();
 }
