@@ -37,7 +37,7 @@ class EventsStore {
   *fetch() {
     const response = yield getEvents()
     this.data = response
-    this.filteredData = response.filter(x => !x.archive).sort((a, b) => `${a._id}`.toString() > `${b._id}`.toString())
+    this.filteredData = response.filter(x => !x.archive)
   }
 
   *addEvent(data) {

@@ -13,7 +13,7 @@ const Sorting = observer(() => {
   const [checkFirstOld, setCheckFirstOld] = useState(false)
 
   const handleSortDefault = action (() => {
-    events.filteredData.sort((a, b) => `${a._id}`.toString() > `${b._id}`.toString())
+    events.filteredData.sort((a, b) => `${a._id}`.toString() > `${b._id}`.toString() ? 1 : -1)
     setCheckDefault(true)
     setCheckFirstNew(false)
     setCheckFirstOld(false)

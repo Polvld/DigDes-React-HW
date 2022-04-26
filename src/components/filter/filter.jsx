@@ -11,7 +11,7 @@ const Filter = observer(() => {
   const {notArchiveData, pastData, todayData, futureData, favoriteData} = events
 
   const handleFiltered = action ((evt) => {
-    events.filteredData = events[evt.target.value].sort((a, b) => `${a._id}`.toString() > `${b._id}`.toString())
+    events.filteredData = events[evt.target.value].sort((a, b) => `${a._id}`.toString() > `${b._id}`.toString() ? 1 : -1)
   })
 
     return (
