@@ -5,9 +5,10 @@ import LoadMore from "../../components/load-more/load-more"
 import { AppRoute } from "../../const"
 import { useLocation } from "react-router-dom"
 import { useState } from "react"
+import { observer } from "mobx-react-lite"
 
 
-const Board = ({events}) => {
+const Board = observer(({events}) => {
     const {pathname} = useLocation()
 
     const [step, setStep] = useState(5);
@@ -27,6 +28,6 @@ const Board = ({events}) => {
             {pathname === AppRoute.ARCHIVE && <LoadMore handleLoadMore={handleLoadMore} />}
         </section>
     )
-}
+})
 
 export default Board
