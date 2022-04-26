@@ -2,7 +2,7 @@ import { computed, makeAutoObservable, onBecomeObserved } from "mobx"
 import { getEvents, addEvent, editEvent, deleteEvent } from "../api"
 import moment from "moment"
 class EventsStore {
-  data = [];
+  data = []
   filteredData = []
 
   constructor() {
@@ -35,9 +35,9 @@ class EventsStore {
   }
 
   *fetch() {
-    const response = yield getEvents();
+    const response = yield getEvents()
     this.data = response
-    this.filteredData = response.filter(x => !x.archive);
+    this.filteredData = response.filter(x => !x.archive)
   }
 
   *addEvent(data) {
